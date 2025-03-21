@@ -39,7 +39,7 @@ function generateRandomNote() {
     // Jeśli wszystkie nuty zostały użyte
     if (usedNotes.size === notes.length) {
         isComplete = true;
-        completionMessage.textContent = "Wszystkie nuty zostały wylosowane!";
+        completionMessage.textContent = "All 12 notes have been randomly selected!";
         completionMessage.classList.add('visible');
     }
 }
