@@ -1,5 +1,5 @@
 // Tablica nut z półtonami
-const notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
+const notes = ['A', 'Bb/A#', 'Cb/B', 'C', 'Db/C#', 'D', 'Eb/D#', 'E', 'F', 'Gb/F#', 'G', 'Ab/G#'];
 
 let metronomeInterval = null;
 let audioContext = null;
