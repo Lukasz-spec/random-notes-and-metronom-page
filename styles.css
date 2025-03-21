@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('Images/Zdjecie_tlo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #2b1810;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 248, 240, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+.container {
+    background-color: rgba(245, 235, 224, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(43, 24, 16, 0.15);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.note-generator {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 252, 248, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+#generateNote {
+    background-color: #8b4513;
+    color: #fff5eb;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.2);
+}
+
+#generateNote:hover {
+    background-color: #6b3410;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+.note-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #8b4513;
+    min-height: 4rem;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.1);
+    margin: 1rem 0;
+}
+
+.metronome {
+    text-align: center;
+    background: rgba(255, 252, 248, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.metronome h2 {
+    margin-bottom: 1.5rem;
+    color: #8b4513;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.1);
+}
+
+.metronome-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.bpm-control {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#bpm {
+    width: 90px;
+    padding: 0.7rem;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 252, 248, 0.9);
+    color: #2b1810;
+    font-size: 1.1rem;
+    box-shadow: inset 0 1px 3px rgba(139, 69, 19, 0.1);
+}
+
+button {
+    background-color: #8b4513;
+    color: #fff5eb;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.2);
+}
+
+button:hover {
+    background-color: #6b3410;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+#stopMetronome {
+    background-color: #a64b2a;
+}
+
+#stopMetronome:hover {
+    background-color: #8b3a20;
+}
+
+.completion-message {
+    color: #8b4513;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    min-height: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.1);
+}
+
+.completion-message.visible {
+    opacity: 1;
+} 
